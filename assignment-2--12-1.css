@@ -248,14 +248,15 @@ main {
     /* navbar */
 
     .underline {
-    position: absolute;   /* parent থেকে independent mane karor vitore na theke kaj kora .*/
-    margin-top: 20px;
-    left: 0; 
-    width: 100%;
-    background-color: rgba(254, 163, 1, 1);
-    height: 2px;
-    
-}
+        position: absolute;
+        /* parent থেকে independent mane karor vitore na theke kaj kora .*/
+        margin-top: 20px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(254, 163, 1, 1);
+        height: 2px;
+
+    }
 
     .nav-hide,
     .hide-btn {
@@ -297,9 +298,6 @@ main {
     }
 
     /* 3 pic  */
-    .title {
-        font-size: 26px;
-    }
 
     .all-box {
         gap: 29px;
@@ -313,7 +311,89 @@ main {
         height: 370px;
 
     }
-    .bar{
+
+    .bar {
         display: none;
     }
+
+    /* our stories */
+
+
+    .title {
+        font-size: 26px;
+    }
+}
+
+/* tablet design */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+
+    /* navbar */
+    .navbar {
+        flex-wrap: wrap;
+        /* overflow আটকাবে */
+        gap: 5px;
+        justify-content: center;
+    }
+
+    .navlink {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 50px;
+        font-size: 18px;
+        margin-left: -30px;
+    }
+
+    .nav-btn {
+        width: 140px;
+        height: 46px;
+        font-size: 16px;
+        margin-left: 7px;
+    }
+
+    .school {
+        font-size: 32px;
+    }
+
+    /* banner */
+
+    .banner-container {
+        flex-direction: column-reverse;
+        margin-top: 70px;
+        gap: 20px;
+    }
+
+    .banner-title {
+        font-size: 42px;
+    }
+
+    .banner-description {
+        font-size: 18px;
+    }
+
+    /* 3 pic  */
+
+
+    .all-box {
+        gap: 29px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+    }
+
+    .all-box .box:nth-child(3) {
+        grid-column: 1 / -1;
+        /* পুরো row জুড়ে (start → end) */
+
+        justify-self: center;
+        /* ব্লকটি মাঝখানে থাকবে */
+    }
+
+    /* our stories */
+
+    
+    .title {
+        font-size: 26px;
+    }
+
 }
