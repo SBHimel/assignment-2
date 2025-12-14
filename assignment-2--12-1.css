@@ -61,8 +61,9 @@ body {
 
 header,
 main {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 8.75rem;
+    /* 140px / 16 = 8.75rem */
+    margin-right: 8.75rem;
 }
 
 /* nav design */
@@ -73,7 +74,7 @@ main {
 }
 
 .school {
-    margin-left: 11px;
+    margin-left: 0.8rem;
     font-size: 32px;
     font-weight: 700;
 }
@@ -97,7 +98,7 @@ main {
     width: 197px;
     height: 50px;
     background-color: orange;
-    margin-left: 20px;
+    margin-left: 1.4rem;
     border: none;
     color: white;
     font-size: 20px;
@@ -217,16 +218,151 @@ main {
 .bar {
     display: flex;
     justify-content: center;
-    margin-top: 80px;
-    margin-bottom: 60px;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
     gap: 10px;
 }
 
 
 /* Our stories */
 
+.box-hide {
+    display: none;
+}
+
+.our-stories {
+    background: linear-gradient(0.00deg, #fea1013d, #FFFFFF 100%);
+    display: grid;
+    justify-content: center;
+    padding: 0 4rem 2rem 4rem;
+}
+
+.our-description {
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba(102, 102, 102, 1);
+    padding-left: 1rem;
+}
+
+
+
 .our {
     margin-top: 100px;
+}
+
+.image-wrap {
+    position: relative;
+}
+
+.our-btn-one {
+    position: absolute;
+    bottom: -2.8vh;
+    /* image এর নিচ থেকে */
+    left: 42px;
+    /* image এর বাম দিক থেকে */
+
+    max-width: 174px;
+    height: 48px;
+    padding: 10px 18px;
+
+    background-color: rgba(60, 216, 232, 1);
+    color: white;
+    border: none;
+    border-radius: 47px;
+
+    font-size: 14px;
+}
+
+.story-img {
+    width: 100%;
+    display: block;
+}
+
+.our-btn {
+    position: absolute;
+    bottom: -2.2vh;
+    /* image এর নিচ থেকে */
+    left: 292px;
+    /* image এর বাম দিক থেকে */
+    background-color: rgba(149, 178, 38, 1);
+    color: white;
+    border-radius: 48px;
+    width: 8.3rem;
+    height: 38px;
+    margin-left: -15rem;
+    border: none;
+}
+
+.stories-box {
+    position: relative;
+    border-radius: 16px;
+    background-color: #FFFFFF;
+
+}
+
+.stories-box img {
+    border-radius: 12px;
+}
+
+.two {
+    background-color: rgba(93, 88, 240, 1);
+}
+
+.our-title-one {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 38px;
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+
+.our-title-add {
+    font-weight: 700;
+    font-size: 1rem;
+    padding-left: 0.7rem;
+    padding-top: 1rem;
+    padding-bottom: 10px;
+}
+
+/* vaiya chatgpt ki assistant hise be use korechi and bujei likhechi */
+
+
+.all-stories {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    /* বাম বড়, ডানদিকে ২ column */
+    grid-template-rows: repeat(2, auto);
+    /* দুই row, content অনুযায়ী height */
+    gap: 20px;
+    /* box এর মধ্যে দূরত্ব */
+    max-width: 1170px;
+    max-height: 630px;
+}
+
+/* প্রথম box দুই row জুড়ে */
+.all-stories .stories-box:first-child {
+    grid-row: span 2;
+}
+
+/* ডানদিকে box গুলো column/row অনুযায়ী বসানো */
+.all-stories .stories-box:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.all-stories .stories-box:nth-child(3) {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.all-stories .stories-box:nth-child(4) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.all-stories .stories-box:nth-child(5) {
+    grid-column: 3;
+    grid-row: 2;
 }
 
 
@@ -322,6 +458,38 @@ main {
     .title {
         font-size: 26px;
     }
+
+    .box-hide {
+        display: block;
+    }
+
+    .big-hide {
+        display: none;
+    }
+
+
+    .all-stories {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    /* 🔥 সবচেয়ে জরুরি */
+    .all-stories .stories-box {
+        grid-column: auto !important;
+        grid-row: auto !important;
+
+        /* Mobile/Tablet এ manual desktop column override করতে হবে → grid নিজে column ঠিক করবে */
+
+        /* Mobile/Tablet এ manual desktop row override করতে হবে → grid নিজে row ঠিক করবে */
+    }
+    .our-btn{
+        width: 6rem;
+        height: 1.5rem;
+        margin-left: -17rem;
+        font-size: 9px;
+        margin-bottom: 3px;
+    }
+
 }
 
 /* tablet design */
@@ -391,9 +559,31 @@ main {
 
     /* our stories */
 
-    
+
     .title {
         font-size: 26px;
     }
 
+    /* our stories */
+
+    .box-hide {
+        display: block;
+    }
+
+    .big-hide {
+        display: none;
+    }
+
+
+    .all-stories {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+
+    /* 🔥 সবচেয়ে জরুরি */
+    .all-stories .stories-box {
+        grid-column: auto !important;
+        grid-row: auto !important;
+
+    }
 }
