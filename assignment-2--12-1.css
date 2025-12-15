@@ -21,6 +21,10 @@
 }
 
 /* background image */
+body {
+    margin: 0; /* browser er default body margin remove করার জন্য coding shuru korar age sobsomoy eta diye shuru kora ucit */
+}
+
 
 body {
     background-image: url(assets/bg.png);
@@ -364,7 +368,55 @@ main {
     grid-column: 3;
     grid-row: 2;
 }
+.extra{
+    margin: 5rem auto 4rem;
+}
 
+/* footer footer */
+.kids-title{
+    font-size: 2.60rem;
+    font-weight: 700;
+}
+.kids-img{
+    max-width: 83px;
+    max-height: 81px;
+}
+.hmm{
+    padding-top: 3rem;
+}
+.footer-div{
+    background-color: rgba(1, 172, 253, 1);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    padding-top: 123px;
+    padding-bottom: 173px;
+}
+.about-title{
+    font-size: 24px;
+    font-weight: 700;
+}
+.anchor-footer{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+.down{
+   padding-bottom: 20px;
+}
+
+.keep-title{
+    font-size: 26px;
+    font-weight: 700;
+}
+.keep-image img{
+    padding: 0.5rem;
+    margin-left: -0.7rem;
+}
 
 /* p er somossa somadhaner jonno   */
 
@@ -490,6 +542,15 @@ main {
         margin-bottom: 3px;
     }
 
+    /* footer footer  */
+
+    .footer-div{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-left: 4rem;
+        
+    }
+
 }
 
 /* tablet design */
@@ -586,4 +647,13 @@ main {
         grid-row: auto !important;
 
     }
+
+    /* footer footer  */
+
+    .footer-div{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        padding-left: 4rem;
+    }
+    
 }
