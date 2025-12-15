@@ -22,7 +22,8 @@
 
 /* background image */
 body {
-    margin: 0; /* browser er default body margin remove করার জন্য coding shuru korar age sobsomoy eta diye shuru kora ucit */
+    margin: 0;
+    /* browser er default body margin remove করার জন্য coding shuru korar age sobsomoy eta diye shuru kora ucit */
 }
 
 
@@ -368,23 +369,27 @@ main {
     grid-column: 3;
     grid-row: 2;
 }
-.extra{
+
+.extra {
     margin: 5rem auto 4rem;
 }
 
 /* footer footer */
-.kids-title{
+.kids-title {
     font-size: 2.60rem;
     font-weight: 700;
 }
-.kids-img{
+
+.kids-img {
     max-width: 83px;
     max-height: 81px;
 }
-.hmm{
+
+.hmm {
     padding-top: 3rem;
 }
-.footer-div{
+
+.footer-div {
     background-color: rgba(1, 172, 253, 1);
     color: white;
     display: flex;
@@ -395,25 +400,29 @@ main {
     padding-top: 123px;
     padding-bottom: 173px;
 }
-.about-title{
+
+.about-title {
     font-size: 24px;
     font-weight: 700;
 }
-.anchor-footer{
+
+.anchor-footer {
     text-decoration: none;
     color: white;
     font-size: 20px;
     font-weight: 500;
 }
-.down{
-   padding-bottom: 20px;
+
+.down {
+    padding-bottom: 20px;
 }
 
-.keep-title{
+.keep-title {
     font-size: 26px;
     font-weight: 700;
 }
-.keep-image img{
+
+.keep-image img {
     padding: 0.5rem;
     margin-left: -0.7rem;
 }
@@ -431,7 +440,7 @@ main {
 
 @media screen and (max-width: 576px) {
 
-
+    
 
     /* navbar */
 
@@ -462,6 +471,10 @@ main {
     }
 
     /* banner */
+
+    .img-size{
+        max-width: 21rem;
+    }
     .banner-container {
         flex-direction: column-reverse;
         margin-top: 70px;
@@ -495,8 +508,8 @@ main {
     }
 
     .box {
-        width: 357px;
-        height: 370px;
+        width: 20.3rem;
+        height: 23.1rem;
 
     }
 
@@ -534,7 +547,8 @@ main {
 
         /* Mobile/Tablet এ manual desktop row override করতে হবে → grid নিজে row ঠিক করবে */
     }
-    .our-btn{
+
+    .our-btn {
         width: 6rem;
         height: 1.5rem;
         margin-left: -17rem;
@@ -544,11 +558,11 @@ main {
 
     /* footer footer  */
 
-    .footer-div{
+    .footer-div {
         display: grid;
         grid-template-columns: 1fr;
         padding-left: 1.5rem;
-        
+
     }
 
 }
@@ -650,10 +664,10 @@ main {
 
     /* footer footer  */
 
-    .footer-div{
+    .footer-div {
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
         padding-left: 4rem;
     }
-    
+
 }
